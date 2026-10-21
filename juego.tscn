@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cu4cmsywdtx0r"]
+[gd_scene format=3 uid="uid://cu4cmsywdtx0r"]
 
 [ext_resource type="Texture2D" uid="uid://8y8r70dcvr7t" path="res://sprites/background-day.png" id="1_11653"]
 [ext_resource type="PackedScene" uid="uid://d4etw4024jnr1" path="res://jugador.tscn" id="1_uyp4t"]
@@ -8,29 +8,29 @@
 [ext_resource type="PackedScene" uid="uid://b4a1b7ld85gpc" path="res://spawner.tscn" id="5_1rplx"]
 [ext_resource type="PackedScene" uid="uid://ch35qa31axvxq" path="res://marcador.tscn" id="7_sg6d2"]
 
-[node name="juego" type="Node2D"]
+[node name="juego" type="Node2D" unique_id=1513869930]
 
-[node name="Background-day" type="Sprite2D" parent="."]
+[node name="Background-day" type="Sprite2D" parent="." unique_id=777982356]
 position = Vector2(144, 256)
 texture = ExtResource("1_11653")
 
-[node name="UI" parent="." instance=ExtResource("2_ue3v1")]
+[node name="UI" parent="." unique_id=210768539 instance=ExtResource("2_ue3v1")]
 position = Vector2(146, 211)
 
-[node name="Jugador" parent="." instance=ExtResource("1_uyp4t")]
+[node name="Jugador" parent="." unique_id=1821654568 instance=ExtResource("1_uyp4t")]
 position = Vector2(146, 259)
 
-[node name="Base" parent="." instance=ExtResource("3_dwnor")]
+[node name="Base" parent="." unique_id=699246591 instance=ExtResource("3_dwnor")]
 z_index = 10
 position = Vector2(144, 460)
 
-[node name="Hitbox" parent="." instance=ExtResource("3_fytsg")]
+[node name="Hitbox" parent="." unique_id=811269897 instance=ExtResource("3_fytsg")]
 position = Vector2(147, -20)
 
-[node name="spawner" parent="." instance=ExtResource("5_1rplx")]
+[node name="spawner" parent="." unique_id=1895612138 instance=ExtResource("5_1rplx")]
 position = Vector2(300, 120)
 
-[node name="marcador" parent="." instance=ExtResource("7_sg6d2")]
+[node name="marcador" parent="." unique_id=1826027489 instance=ExtResource("7_sg6d2")]
 
 [connection signal="empezar" from="UI" to="Jugador" method="_on_ui_empezar"]
 [connection signal="empezar" from="UI" to="spawner" method="_on_ui_empezar"]
