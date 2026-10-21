@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqa6idvk3tepe"]
+
+[ext_resource type="Texture2D" uid="uid://cnhwkihbsqdf" path="res://sprites/base.png" id="1_fpof0"]
+[ext_resource type="PackedScene" uid="uid://d4dtvx17x4l03" path="res://hitbox.tscn" id="2_soqve"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtw6a"]
+resource_local_to_scene = true
+size = Vector2(330, 12)
+
+[node name="Base" type="Sprite2D"]
+texture = ExtResource("1_fpof0")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_soqve")]
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -46)
+shape = SubResource("RectangleShape2D_jtw6a")
+
+[editable path="Hitbox"]

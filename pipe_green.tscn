@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3ds654s6u5cq"]
+
+[ext_resource type="Texture2D" uid="uid://bv60d4atvw8j3" path="res://sprites/pipe-green.png" id="1_n1nv8"]
+[ext_resource type="PackedScene" uid="uid://d4dtvx17x4l03" path="res://hitbox.tscn" id="2_ahb23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8cmn"]
+resource_local_to_scene = true
+size = Vector2(37, 311)
+
+[node name="Pipe-green" type="Sprite2D"]
+texture = ExtResource("1_n1nv8")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_ahb23")]
+position = Vector2(17, -151)
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(-17.5, 152.5)
+shape = SubResource("RectangleShape2D_j8cmn")
+
+[editable path="Hitbox"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch35qa31axvxq"]
+
+[ext_resource type="Script" path="res://marcador.gd" id="1_drxyw"]
+[ext_resource type="PackedScene" uid="uid://djd5r6q8fqxja" path="res://numero.tscn" id="2_f8f8m"]
+
+[node name="marcador" type="CanvasLayer"]
+script = ExtResource("1_drxyw")
+
+[node name="Numero" parent="." instance=ExtResource("2_f8f8m")]
+position = Vector2(157, 40)
+
+[node name="Numero2" parent="." instance=ExtResource("2_f8f8m")]
+position = Vector2(128, 40)
